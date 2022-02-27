@@ -1,0 +1,214 @@
+How does an Angular application work?
+Explain the Structure of Angular.
+What is tsconfig.json
+What is angular.json
+
+Primitive data type
+Non-primitive (reference) data type
+
+https://dzone.com/articles/what-are-the-basic-data-types-in-typescript#:~:text=Some%20common%20data%20types%20in,will%20always%20need%20to%20use.
+https://www.typescriptlang.org/docs/handbook/basic-types.html
+
+
+---------JS--------------
+what is es5?
+what is es6?
+
+what is difference between es5 and es6?
+oops in js?Expalin?
+The let keyword
+The const keyword
+JavaScript Arrow Functions
+JavaScript For/of
+JavaScript Classes
+JavaScript Promises
+JavaScript Symbol
+Default Parameters
+Function Rest Parameter
+Array.find()
+Array.findIndex()
+New Math Methods
+New Number Properties
+New Number Methods
+New Global Methods
+JavaScript Modules
+
+let language = "JavaScript";
+let text = "";
+
+for (let x of language) {
+  text += x + "<br>";
+}
+
+-------------------------
+Create a parent and its child component, add a button in parent component. On clicking the button .Change the color of child component.
+Create a component declare an json array ([{name:'a',age:30},{name:'b',age:50}]....).create a dynamic select box using this array.OnChange show the details inside the array.
+Create a component declare an json array ([{name:'a',age:30},{name:'b',age:50}]....).sort the data according age or name.
+
+Enum : Is a collection of named constants
+
+https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
+
+
+is_array = function(input){
+if(toString.call(input) === "[object Array]"){
+	return true
+}
+else{
+return false
+}
+}
+
+is_array([123])
+true
+
+----------------------Web APIs--------------
+console.log("one")
+setTimeout(()=>{
+console.log("one and half");
+},1000)
+console.log("two");
+
+-------------------
+leakage of global variable
+
+function ab(){
+	height = 50;
+	return height;
+}
+console.log(ab())
+console.log(height)
+op: 
+50
+50
+---------------------
+function max(...varss){
+return Math.max(...varss)
+}
+max(1,88,5,99,534,464,354,5,53)
+99
+---------------------
+arr1 = [4,8,10]
+arr2 = [1,2,3,...arr1]
+console.log(arr2)
+(6) [1, 2, 3, 4, 8, 10]
+----------------------
+opps
+--------------------------------
+function createNewPerson(name) {
+  const obj = {};
+  obj.name = name;
+  obj.greeting = function() {
+    alert('Hi! I\'m ' + obj.name + '.');
+  };
+  return obj;
+}
+
+const salva = createNewPerson('Salva');
+salva.name;
+salva.greeting();
+----------------------------
+
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return 'I have a ' + this.carname;
+  }
+}
+
+class Model extends Car {
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + ', it is a ' + this.model;
+  }
+}
+
+mycar = new Model("Ford", "Mustang");
+
+----------------------------------------------------
+
+
+A Promise is in one of these states:
+
+pending: initial state, neither fulfilled nor rejected.
+fulfilled: meaning that the operation was completed successfully.
+rejected: meaning that the operation failed.
+
+----------------------Imp------------------------------
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Component({
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: [ './app.component.css' ]
+})
+export class AppComponent implements OnInit  {
+  name = 'Angular';
+  apiUrl = 'https://www.techiediaries.com/api/data.json';
+
+  constructor(private httpClient: HttpClient){}
+
+  ngOnInit(){
+    this.fetchData();
+  }
+
+  private fetchData(){
+    const promise = this.httpClient.get("https://jsonplaceholder.typicode.com/todos/1").toPromise();
+    console.log(promise);  
+    promise.then((data)=>{
+      console.log("Promise resolved with: " + JSON.stringify(data));
+    }).catch((error)=>{
+      console.log("Promise rejected with " + JSON.stringify(error));
+    });
+  }
+}
+
+----------------------Imp------------------------------
+
+https://stackblitz.com/edit/angular-tutorial-promise?file=src%2Fapp%2Fapp.component.ts
+ text = "NO FOUND";
+    
+    login() {
+
+    //Create New Promise
+    new Promise((resolve, reject) => {
+      setTimeout(() => {
+        this.text = "STEP 0";
+        resolve({ name: "sunil", id: 1234 })
+      }, 2000)
+
+    //Create 2nd Promoise
+    }).then(response => {
+      this.text = "STEP 1";
+      console.log("Step 1 completed ", response)
+      return new Promise((resolve, reject) => {
+        setTimeout(_ => resolve(Object.assign({ title: "singh" }, response)), 2000)
+      });
+    //Without any promise
+    }).then(response => {
+      this.text = "STEP 2";
+      console.log("Step 2 completed ", response);
+      return "Simple text";
+    // Without Promise and with Delayed message  
+    }).then(response => {
+      this.text = "STEP 3";
+      console.log("Step 3 ", response);
+      setTimeout(() => { console.log("Step 3 Delayed ") }, 2000);
+
+    //Final Excetion
+    }).then(response => {
+      this.text = "STEP 4";
+      console.log("Step 4 ", response);
+    })
+
+  }
+
+
+
+https://github.com/lukehoban/es6features#iterators--forof

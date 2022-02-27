@@ -1,0 +1,43 @@
+How does an Angular application work?
+Explain the Structure of Angular.
+
+
+---------JS--------------
+what is es5?
+what is es6?
+what is difference between es5 and es6?
+oops in js?Expalin?
+
+-------------------------
+Create a parent and its child component, add a button in parent component. On clicking the button .Change the color of child component.
+Create a component declare an json array ([{name:'a',age:30},{name:'b',age:50}]....).create a dynamic select box using this array.OnChange show the details inside the array.
+Create a component declare an json array ([{name:'a',age:30},{name:'b',age:50}]....).sort the data according age or name.
+
+ 
+
+https://www.interviewbit.com/angular-interview-questions/
+
+Every Angular app consists of a file named angular.json. This file will contain all the configurations of the app. While building the app, the builder looks at this file to find the entry point of the application. Following is an image of the angular.json file:
+
+"build": {
+"builder": "@angular-devkit/build-angular:browser",
+"options": {
+"outputPath": "dist/angular-starter",
+"index": "src/index.html",
+"main": "src/main.ts",
+"polyfills": "src/polyfills.ts",
+"tsConfig": "tsconfig.app.json",
+"aot": false,
+"assets": [
+"src/favicon.ico",
+"src/assets"
+],
+"styles": [
+"./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+"src/style.css"
+]
+}
+}
+
+-----------------------------------------------------------------------------
+

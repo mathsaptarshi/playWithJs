@@ -1,0 +1,7 @@
+https://www.interviewbit.com/html-interview-questions/
+
+
+What is <!Doctype>
+1. What is symentic tag?
+2. What is canvus? Why we use it?
+3. order List un order list
