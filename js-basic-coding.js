@@ -303,3 +303,22 @@ function Person(first, last, age, eyecolor) {
   
   const myFather = new Person("John", "Doe", 50, "blue");
   const myMother = new Person("Sally", "Rally", 48, "green");
+
+
+//   Write a function in js that will take two parameters. One is object and another is a property. The task is to strip the property from the object and return the final object
+
+function stripProperty(obj, prop){
+    var x;
+    for(x in obj){
+        if(x === prop){
+            delete obj[x];
+        }
+    }
+    return obj;
+}
+
+let obj = {
+    name: "Saptarshi",
+    age: 28
+};
+stripProperty(obj,"age")
