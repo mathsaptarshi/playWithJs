@@ -9,3 +9,6 @@ https://stackblitz.com/edit/angula-webworker?file=src%2Fapp%2Fworker%2Fwebworker
 Web Worker
 https://medium.com/@leonardomariamiliacca/web-workers-for-asynchronous-operations-in-angular-fa369968b90a
 */
+
+// What is Change Detection
+https://dzone.com/articles/how-to-use-change-detection-in-angular
