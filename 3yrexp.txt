@@ -62,25 +62,7 @@ return false
 is_array([123])
 true
 
-----------------------Web APIs--------------
-console.log("one")
-setTimeout(()=>{
-console.log("one and half");
-},1000)
-console.log("two");
 
--------------------
-leakage of global variable
-
-function ab(){
-	height = 50;
-	return height;
-}
-console.log(ab())
-console.log(height)
-op: 
-50
-50
 ---------------------
 function max(...varss){
 return Math.max(...varss)
@@ -140,34 +122,6 @@ fulfilled: meaning that the operation was completed successfully.
 rejected: meaning that the operation failed.
 
 ----------------------Imp------------------------------
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
-@Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
-})
-export class AppComponent implements OnInit  {
-  name = 'Angular';
-  apiUrl = 'https://www.techiediaries.com/api/data.json';
-
-  constructor(private httpClient: HttpClient){}
-
-  ngOnInit(){
-    this.fetchData();
-  }
-
-  private fetchData(){
-    const promise = this.httpClient.get("https://jsonplaceholder.typicode.com/todos/1").toPromise();
-    console.log(promise);  
-    promise.then((data)=>{
-      console.log("Promise resolved with: " + JSON.stringify(data));
-    }).catch((error)=>{
-      console.log("Promise rejected with " + JSON.stringify(error));
-    });
-  }
-}
 
 ----------------------Imp------------------------------
 
