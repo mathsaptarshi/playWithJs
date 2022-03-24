@@ -27,19 +27,23 @@ typeof(a); //'undefined'
 
 // ****************************************************
 
+// ----------------------Web APIs--------------
 console.log("one")
 setTimeout(()=>{
-    console.log("one and half");
-},100)
+console.log("one and half");
+},1000)
 console.log("two");
-
 
 //***********************PRIMITIVE VS NON PRIMITIVE**********/ 
 // Q> what is diference between static typed language and dynamically typed language?
 /* https://www.javascripttutorial.net/javascript-pass-by-value/ */
 /* 
-JavaScript provides six primitive types as undefined, null, boolean, number, string, and symbol , and a reference type object
+JavaScript provides six 
+primitive types as undefined, null, boolean, number, string, and symbol , and 
+a reference type object;s
 */
+
+// What is the output?
 let a = 5
 let b = a
 b++
@@ -47,10 +51,11 @@ b++
 console.log(a)
 console.log(b)
 
-/* o/p - 
+/* 
+o/p - 
 5
 6
- */
+*/
 
 let obj1 = {name:'test',password:'123'}
 let obj2 = obj1;
@@ -68,28 +73,31 @@ password: "easy"
 name: "saptarshi"
 password: "easy"
 }
- */
+*/
 
 /* Primitive mutable */
 function square(x) {
     x = x * x;
     return x;
 }
+
 var y = 10;
 var result = square(y);
 console.log(y); // 10 -- no change
 console.log(result); // 100 
 
+/* Non Primitive not mutable */
 function turnOn(machine) {
     machine.isOn = true;
 }
-/* Non Primitive not mutable */
+
 var computer = {
     isOn: false
 };
 
 turnOn(computer);
-console.log(computer.isOn); // true;
+console.log(computer.isOn); 
+// true;
 
 // Scope issue
 // var a = {flag:true};
@@ -130,7 +138,7 @@ console.log(height)
 50
 50 */
 
-// ***********************************Write a recursive function of countDown
+// ********************************** Write a recursive function of countDown ********************
 
 function countdown(n, result = []) {
     if (n < 1){
@@ -192,7 +200,7 @@ function sumOfDigits(num) {
 sumOfDigits(44);
 
 
-/* *********Reverse a string using a JavaScript stack******** */
+/* ********* Reverse a string using a JavaScript stack******** */
 
 function reverse(str) {
     let stack = [];
@@ -322,3 +330,116 @@ let obj = {
     age: 28
 };
 stripProperty(obj,"age")
+
+// hoisting
+function abc(){
+    console.log(a);
+
+    var a = 10
+}
+abc();
+// undefined
+// Now
+
+function abc(){
+    console.log(a);
+    console.log(b);
+    console.log(c);
+
+    var a = 10;
+    let b = 20;
+    let c = 30;
+}
+abc();
+// VM93:2 Uncaught ReferenceError: Cannot access 'b' before initialization
+// b anc c are initilize in temporary dead zone(variables are in scope but they are not declared)
+// *********************************************************
+// Q> What is Implicit and Explicit binding?
+
+var obj = {
+    name: "Saptarshi",
+    display :  function() {
+        console.log(this,this.name)    
+    },
+};
+
+var obj1 = {
+    name: "ABC"
+}
+
+obj.display();//Saptarshi
+obj.display.call(obj1)//ABC
+
+/* Now if display be an arrow function */
+
+var obj = {
+    name: "Saptarshi",
+    display :  () => {
+        console.log(this,this.name)    
+    },
+};
+
+var obj1 = {
+    name: "ABC"
+}
+
+obj.display();//Saptarshi
+obj.display.call(obj1)//ABC
+
+/* Arrow function pointing to the Global object and there are no name prop so its return "" */
+
+
+function lcm_two_numbers(x, y) {
+    if ((typeof x !== 'number') || (typeof y !== 'number')) 
+     return false;
+   return (!x || !y) ? 0 : Math.abs((x * y) / gcd_two_numbers(x, y));
+ }
+ 
+ function gcd_more_than_two_numbers(input) {
+    if (toString.call(input) !== "[object Array]")  
+          return  false;  
+    var len, a, b;
+      len = input.length;
+      if ( !len ) {
+          return null;
+      }
+      a = input[ 0 ];
+      for ( var i = 1; i < len; i++ ) {
+          b = input[ i ];
+          a = gcd_two_numbers( a, b );
+      }
+      return a;
+  }
+  
+  function gcd_two_numbers(x, y) {
+    if ((typeof x !== 'number') || (typeof y !== 'number')) 
+      return false;
+    x = Math.abs(x);
+    y = Math.abs(y);
+    while(y) {
+      var t = y;
+      y = x % y;
+      x = t;
+    }
+    return x;
+  }
+  console.log(gcd_more_than_two_numbers([3,15,27]));
+  console.log(gcd_more_than_two_numbers([5,10,15,25]));
+ console.log(lcm_two_numbers(3,15));
+ console.log(gcd_two_numbers(4,15));
+
+
+ // program to display the sum of natural numbers
+
+// take input from the user
+const number = parseInt(prompt('Enter a positive integer: '));
+
+let sum = 0;
+
+// looping from i = 1 to number
+// in each iteration, i is increased by 1
+for (let i = 1; i <= number; i++) {
+    sum += i;
+}
+
+console.log('The sum of natural numbers:', sum);
