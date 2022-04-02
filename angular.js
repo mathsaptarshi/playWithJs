@@ -1,3 +1,16 @@
+// *******
+What is angular?
+
+Angular is a development platform, built on TypeScript.
+   As a platform, Angular includes:
+A component-based framework for building scalable web applications
+A collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, and more
+A suite of developer tools to help you develop, build, test, and update your code
+What is Decorator?
+Decorators are a design pattern that is used to separate modification or decoration of a class without modifying the original source code.
+
+
+
 1. What is RxJS?
 RxJS (Reactive Extensions for JavaScript) is a library for reactive programming using observables that makes it easier to compose asynchronous or callback-based code
 2. What is Reactive programming?
