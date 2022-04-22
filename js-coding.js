@@ -26,7 +26,7 @@ var a;
 typeof(a); //'undefined'
 
 // ****************************************************
-
+/* Javascript is synchronous or asynchronous? */
 // ----------------------Web APIs--------------
 console.log("one")
 setTimeout(()=>{
@@ -184,7 +184,8 @@ factorial(6)
 
 
 /* ---------- Calculate the sum of digits of a number example---- */
-/* 
+/* Q>> Write a recurcive function to calculate the sum of each digits  ex 88> 16*/
+/*
 f(324) = 4 + f(32)
 f(32)  = 2 + f(3)
 f(3)   = 3  + 0 (stop here)
@@ -201,6 +202,7 @@ sumOfDigits(44);
 
 
 /* ********* Reverse a string using a JavaScript stack******** */
+/* What is Stack and queue? Write a function to reverse a string using stack */
 
 function reverse(str) {
     let stack = [];
@@ -233,7 +235,7 @@ if(theVal > 0){
 }
 // Uncaught ReferenceError: thVal is not defined
 
-// Rest and spread operator__________________
+// Q>> What is Rest and spread operator__________________
 
 // What is the output?
 function sum(a,b){
@@ -356,37 +358,37 @@ abc();
 // *********************************************************
 // Q> What is Implicit and Explicit binding?
 
-var obj = {
+var myobj = {
     name: "Saptarshi",
     display :  function() {
         console.log(this,this.name)    
     },
 };
 
-var obj1 = {
+var myobj1 = {
     name: "ABC"
 }
 
-obj.display();//Saptarshi
-obj.display.call(obj1)//ABC
+myobj.display();//Saptarshi
+myobj.display.call(myobj1)//ABC
 
 /* Now if display be an arrow function */
 
-var obj = {
+var arrowobj = {
     name: "Saptarshi",
     display :  () => {
         console.log(this,this.name)    
     },
 };
 
-var obj1 = {
+var arrowobj1 = {
     name: "ABC"
 }
 
-obj.display();//Saptarshi
-obj.display.call(obj1)//ABC
+arrowobj.display();//Saptarshi
+arrowobj.display.call(obj1)//ABC
 
-/* Arrow function pointing to the Global object and there are no name prop so its return "" */
+/* NB: Arrow function pointing to the Global object and there are no name prop so its return "" */
 
 
 function lcm_two_numbers(x, y) {
@@ -443,3 +445,301 @@ for (let i = 1; i <= number; i++) {
 }
 
 console.log('The sum of natural numbers:', sum);
+
+
+
+/* **********************Pattern**************  https://www.tutorialstonight.com/js/javascript-star-pattern.php */
+
+/* 
+*****
+*****
+*****
+*****
+***** 
+*/
+
+/* 
+let n = 5; // row or column count
+// defining an empty string
+let string = "";
+
+for(let i = 0; i < n; i++) { // external loop
+  for(let j = 0; j < n; j++) { // internal loop
+    string += "*";
+  }
+  // newline after each row
+  string += "\n";
+}
+// printing the string
+console.log(string);
+ */
+/* 
+*****
+*   *
+*   *
+*   *
+***** */
+
+/* let n = 5; // row or column count
+// defining an empty string
+let string = "";
+
+for(let i = 0; i < n; i++) { // external loop
+  for(let j = 0; j < n; j++) { // internal loop
+    if(i === 0 || i === n - 1) {
+      string += "*";
+    }
+    else {
+      if(j === 0 || j === n - 1) {
+        string += "*";
+      }
+      else {
+        string += " ";
+      }
+    }
+  }
+  // newline after each row
+  string += "\n";
+}
+// printing the string
+console.log(string); */
+
+/* 
+*
+**
+***
+****
+*****
+
+let n = 5;
+let string = "";
+for (let i = 1; i <= n; i++) {
+  // printing spaces
+  for (let j = 0; j < n - i; j++) {
+    string += " ";
+  }
+  // printing star
+  for (let k = 0; k < i; k++) {
+    string += "*";
+  }
+  string += "\n";
+}
+console.log(string);
+
+
+*
+**
+***
+****
+*****
+
+
+let n = 5;
+let string = "";
+for (let i = 1; i <= n; i++) {
+  for (let j = 0; j < i; j++) {
+    string += "*";
+  }
+  string += "\n";
+}
+console.log(string);
+
+
+*
+**
+* *
+*  *
+*   *
+******
+
+let n = 6;
+let string = "";
+
+for (let i = 1; i <= n; i++) {
+  // printing star
+  for (let j = 0; j < i; j++) {
+    if(i === n) {
+      string += "*";
+    }
+    else {
+      if (j == 0 || j == i - 1) {
+        string += "*";
+      }
+      else {
+        string += " ";
+      }
+    }
+  }
+  string += "\n";
+}
+console.log(string);
+
+
+    *
+   ***
+  *****
+ *******
+*********
+
+let n = 5;
+let string = "";
+// External loop
+for (let i = 1; i <= n; i++) {
+  // printing spaces
+  for (let j = 1; j <= n - i; j++) {
+    string += " ";
+  }
+  // printing star
+  for (let k = 0; k < 2 * i - 1; k++) {
+    string += "*";
+  }
+  string += "\n";
+}
+console.log(string);
+
+
+
+*********
+ *******
+  *****
+   ***
+    *
+    
+   let n = 5;
+let string = "";
+// External loop
+for (let i = 0; i < n; i++) {
+  // printing spaces
+  for (let j = 0; j < i; j++) {
+    string += " ";
+  }
+  // printing star
+  for (let k = 0; k < 2 * (n-i) - 1; k++) {
+    string += "*";
+  }
+  string += "\n";
+}
+console.log(string);
+
+
+    *
+   * *
+  *   *
+ *     *
+*********
+
+
+let n = 5;
+let string = "";
+
+// External loop
+for (let i = 1; i <= n; i++) {
+  // printing spaces
+  for (let j = 1; j <= n - i; j++) {
+    string += " ";
+  }
+  // printing star
+  for (let k = 0; k < 2 * i - 1; k++) {
+    if(i === 1 || i === n) {
+      string += "*";
+    }
+    else {
+      if(k === 0 || k === 2 * i - 2) {
+        string += "*";
+      }
+      else {
+        string += " ";
+      }
+    }
+  }
+  string += "\n";
+}
+console.log(string);
+
+
+
+    * 
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+    
+     
+   let n = 5;
+let string = "";
+// Upside pyramid
+for (let i = 1; i <= n; i++) {
+  // printing spaces
+  for (let j = n; j > i; j--) {
+    string += " ";
+  }
+  // printing star
+  for (let k = 0; k < i * 2 - 1; k++) {
+    string += "*";
+  }
+  string += "\n";
+}
+// downside pyramid
+for (let i = 1; i <= n - 1; i++) {
+  // printing spaces
+  for (let j = 0; j < i; j++) {
+    string += " ";
+  }
+  // printing star
+  for (let k = (n - i) * 2 - 1; k > 0; k--) {
+    string += "*";
+  }
+  string += "\n";
+}
+console.log(string);
+
+
+
+
+***   ***
+***** *****
+***********
+ *********
+  *******
+   *****
+    ***
+     *
+     
+
+    var n = 6;
+var str = "";
+for (let i = n / 2; i < n; i += 2) {
+  // print first spaces
+  for (let j = 1; j < n - i; j += 2) {
+    str += " ";
+  }
+  // print first stars
+  for (let j = 1; j < i + 1; j++) {
+    str += "*";
+  }
+  // print second spaces
+  for (let j = 1; j < n - i + 1; j++) {
+    str += " ";
+  }
+  // print second stars
+  for (let j = 1; j < i + 1; j++) {
+    str += "*";
+  }
+  str += "\n";
+}
+// lower part
+// inverted pyramid
+for (let i = n; i > 0; i--) {
+  for (let j = 0; j < n - i; j++) {
+    str += " ";
+  }
+  for (let j = 1; j < i * 2; j++) {
+    str += "*";
+  }
+  str += "\n";
+}
+console.log(str); */

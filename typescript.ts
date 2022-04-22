@@ -1,5 +1,5 @@
 // Q> Define a class Person whit two variable name and age and one method getBirthYear()
-
+/* 
 class Person {
   constructor(
     public name: string,
@@ -17,4 +17,4 @@ const jon = new Person("John", 35);
 
 console.log(jon.name);
 console.log(jon.age);
-console.log(jon.getBirthYear());
+console.log(jon.getBirthYear()); */
