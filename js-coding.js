@@ -125,6 +125,22 @@ console.log(a);
 
 
 
+/* 
+var is partially hoisted and function is fully hoisted so it will print 
+undefined then
+hi 
+*/
+
+// What will be the output?
+console.log(name);
+console.log(sayHi());
+
+let name = 'John';
+function sayHi(){
+
+    return "Hi";
+}
+
 // *****************************leakage of global variable
 
 function ab(){
