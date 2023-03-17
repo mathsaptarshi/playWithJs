@@ -1,0 +1,133 @@
+<!-- Must specify width and height of DOM, ref CSS -->
+<div id="main"></div>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/echarts.min-353-english.js"></script>
+
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/dataTool.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<style>
+
+
+body {
+	background-color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px; 
+	color: #000;
+}
+
+a:link, a:visited {
+	color: #4682b4;
+}
+
+a:hover {
+	color: #4169e1;
+}
+
+#main	{
+	width: 1000px;
+	height: 700px;
+}
+
+</style>
+
+<script>
+
+		var chart = echarts.init(document.getElementById('main'));
+
+chart.showLoading();
+
+$.getJSON('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/obama_budget_proposal_2012.list.json', function (obama_budget_2012) {
+    chart.hideLoading();
+
+    option = {
+        tooltip : {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow',
+                label: {
+                    show: true
+                }
+            }
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType: {show: true, type: ['line', 'bar']},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        calculable : true,
+        legend: {
+            data:['Growth', 'Budget 2011', 'Budget 2012'],
+            itemGap: 5
+        },
+        grid: {
+            top: '12%',
+            left: '1%',
+            right: '10%',
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type : 'category',
+                data : obama_budget_2012.names
+            }
+        ],
+        yAxis: [
+            {
+                type : 'value',
+                name : 'Budget (million USD)',
+                axisLabel: {
+                    formatter: function (a) {
+                        a = +a;
+                        return isFinite(a)
+                            ? echarts.format.addCommas(+a / 1000)
+                            : '';
+                    }
+                }
+            }
+        ],
+        dataZoom: [
+            {
+                show: true,
+                start: 94,
+                end: 100
+            },
+            {
+                type: 'inside',
+                start: 94,
+                end: 100
+            },
+            {
+                show: true,
+                yAxisIndex: 0,
+                filterMode: 'empty',
+                width: 30,
+                height: '80%',
+                showDataShadow: false,
+                left: '93%'
+            }
+        ],
+        series : [
+            {
+                name: 'Budget 2011',
+                type: 'bar',
+                data: obama_budget_2012.budget2011List
+            },
+            {
+                name: 'Budget 2012',
+                type: 'bar',
+                data: obama_budget_2012.budget2012List
+            }
+        ]
+    };
+
+    chart.setOption(option);
+
+});
+
+</script>
