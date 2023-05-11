@@ -77,3 +77,44 @@ for(let i = 0; i<=n; i++){
 }
 
 console.log(str4)
+
+
+
+
+// 5
+let str5 = "";
+for(let i = 0; i<=n; i++){
+    for(let j = 0; j<n; j++){
+        if(i === 0||i===n-j||j==0) {
+            // str5 += i+""+j+' ';
+            str5 += "*";
+          }
+          else {
+            // str5 += i+""+j+' ';
+              str5 += " ";
+          }
+    }
+    str5 += "\n"
+}
+
+console.log(str5);
+
+
+
+// 6
+let str6 = "";
+for(let i = 0; i<=n; i++){
+    for(let j = 0; j<n; j++){
+        if(i === 0||i===n-j||j==0) {
+            // str5 += i+""+j+' ';
+            str6 += "*";
+          }
+          else {
+            // str5 += i+""+j+' ';
+              str6 += " ";
+          }
+    }
+    str6 += "\n"
+}
+
+console.log(str6)
