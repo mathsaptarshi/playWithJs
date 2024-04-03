@@ -1,0 +1,15 @@
+{
+  "name": "timer",
+  "version": "1.0.0",
+  "description": "rxjs test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saptarshi Biswas",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
+    "rxjs": "^7.8.1"
+  }
+}
