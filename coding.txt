@@ -74,8 +74,8 @@ op:
 50
 50
 ---------------------
-Q>Find max among numbers?
 
+Q>Find max among numbers?
 function max(...varss){
 return Math.max(...varss)
 }

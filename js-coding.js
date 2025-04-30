@@ -759,3 +759,32 @@ for (let i = n; i > 0; i--) {
   str += "\n";
 }
 console.log(str); */
+
+
+/* Q> Given an array of integers, Find and print the unique element.
+input:1,1,5,4,3,3,5,6,7,2,7,6,2
+0/p: 4 */
+
+function lonelyInteger(a){
+  let num_info = {};
+  if(a.length == 1){
+    return a[0]
+  }
+  a.foreach((num)=>{
+    if(num_info[num]==null){
+      num_info[num] = 1;
+    }
+    else{
+      num_info[num] = num_info[num]+1;
+    }
+  });
+  let keys_arr = Object.keys(num_info);
+  let values_arr = Object.values(num_info);
+  return keys_arr[values_arr.indexOf(1)];
+}
+let ans = lonelyInteger([5,2,0,0,1,2,1])
+console.log(ans)
+
+function lonelyIntegerXOR(a){
+  return a.reduce((x,y)=>xˆy)
+}
