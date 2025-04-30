@@ -1,0 +1,24 @@
+Consider below given image with the following reference: -> Content Choreography
+Miss Andrews was referring a text from another website -> blockquote
+Eliza, a student, used to access an online book website -> Reverse Tab nabbing
+Predict the output of the below -> ”100” “John” “Peter” “Peter”
+Miss Jenny a web develope-> textarea
+Identify the appropriate type of security analyzer tools that perform->Option B (SAST), (DAST),(IAST)
+Mr. X was designing XYZ website and h -> A <p title="This is a tooltip">Hey, this is HTML5</p>
+Druv was asked to conduct a questionnaire on the frameworks -> LESS, SASS and STYLUS are preprocessor frameworks
+Mr. Robert has developed a website. Robert -> skew
+Mithri is a trainee in XYZ corporation and has -> <input type="text" name="UserName" value="Enter Your Employee Number Here"/>
+Ann is creating a form for cultural fest registration. -> A
+John is designing a web page containing a login form, -> d action="Home.html">
+Allen has been asked to list -> d b and d
+Aditya is reading a document about JS -> c
+Twitter Bootstrap framework -> This framework can be used for styling Mobile First Application
+Rose has created below-mentioned code: -> c #greet{ transform:rotate(60deg); }
+Mr. Jai while designing the Customer Enrollment p -> Option C title
+Mr. John has developed a website. He wants to include - > a. iFrame
+Which of the below is not valid pseudo class? -> d writeonly
+Maria is creating a shopping cart application-> Option A text-shadow:0 0 5px rgba(255, 0, 0,1);
+Sahil has created a registration page for their Website-> Option D pattern="[a-zA-Z]"
+Identify the correct statement from the below ===  Option C  Both Alex and John
+Mr. James wants to develop the below functionality of the navbar====  Option A Select Menu
+After logging in a web application, Riya ==== ii and iv

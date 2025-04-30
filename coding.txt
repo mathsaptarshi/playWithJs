@@ -1,16 +1,14 @@
-'' == '0'
-// => false
-0 == ''
-// => true
-0 == '0'
-// => true
-false == ''
-// => true
+Q> What is the output of the following code snippet?
+
+'' == '0'     // => false                      
+0 == ''       // => true
+0 == '0'      // => true
+false == ''		// => true
 
 // About NaN //
-
+     
 NaN
-// NaN
+// NaN                                                           
 typeof(NaN)
 // "number"
 'abc'/4
@@ -76,11 +74,12 @@ op:
 50
 50
 ---------------------
+Q>Find max among numbers?
+
 function max(...varss){
 return Math.max(...varss)
 }
 max(1,88,5,99,534,464,354,5,53)
-99
 ---------------------
 arr1 = [4,8,10]
 arr2 = [1,2,3,...arr1]

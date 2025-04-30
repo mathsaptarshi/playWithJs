@@ -2,7 +2,6 @@ How does an Angular application work?
 Explain the Structure of Angular.
 What is tsconfig.json
 What is angular.json
-
 Primitive data type
 Non-primitive (reference) data type
 
@@ -13,9 +12,8 @@ https://www.typescriptlang.org/docs/handbook/basic-types.html
 ---------JS--------------
 what is es5?
 what is es6?
-
 what is difference between es5 and es6?
-oops in js?Expalin?
+oops in js? Expalin?
 The let keyword
 The const keyword
 JavaScript Arrow Functions
@@ -43,7 +41,7 @@ for (let x of language) {
 -------------------------
 Create a parent and its child component, add a button in parent component. On clicking the button .Change the color of child component.
 Create a component declare an json array ([{name:'a',age:30},{name:'b',age:50}]....).create a dynamic select box using this array.OnChange show the details inside the array.
-Create a component declare an json array ([{name:'a',age:30},{name:'b',age:50}]....).sort the data according age or name.
+Create a component declare an json array ([{name:'a',age:30},{name:'b',age:50}]....).sort the data according age or name.      
 
 Enum : Is a collection of named constants
 
