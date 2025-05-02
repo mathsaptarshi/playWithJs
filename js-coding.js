@@ -5,17 +5,13 @@
 0 == '0'       // => true
 false == ''    // => true
 
-
 /* // About NaN // */
-
 NaN             // NaN
 typeof(NaN)     // "number"
 'abc'/4         // NaN
-
 NaN == 1        // false
 NaN == false    // false
 NaN == NaN      // false
-
 isNaN(NaN)      // true
 isNaN(1)        // false
 
