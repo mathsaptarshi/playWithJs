@@ -1,4 +1,21 @@
-console.log("start")
+/*  What will be in the console?
+
+console.log('Start');
+setTimeout(()=>{
+  console.log('Timeout 1')
+},0)
+setTimeout(()=>{
+  console.log('Timeout 2')
+},1000)
+Promise.resolve().then(()=>{
+  console.log('Promise Resolved')
+})
+console.log('End'); 
+
+*/
+
+
+
 // 1. Find the sum of the following series 1+2+3+.....+n terms. Where n = 10,
 /* 
 let n = 10;
