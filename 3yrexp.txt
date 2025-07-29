@@ -30,6 +30,7 @@ New Number Properties
 New Number Methods
 New Global Methods
 JavaScript Modules
+Difference between package.json and package.lock.json?
 
 let language = "JavaScript";
 let text = "";

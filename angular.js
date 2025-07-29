@@ -20,3 +20,13 @@ In computing, reactive programming is a declarative programming paradigm concern
 
 3. What is declarative programming?
 In computer science, declarative programming is a programming paradigm—a style of building the structure and elements of computer programs—that expresses the logic of a computation without describing its control flow. */
+
+/*
+4. What is the difference between package.json and package.lock.json?
+Exact versions: For every single package installed (both direct and transitive dependencies), it lists its exact version number.
+
+Integrity hashes: It includes a checksum (e.g., SHA-512) for each package, ensuring that the installed package hasn't been tampered with.
+
+Dependency tree structure: It records the hierarchical structure of your node_modules folder, specifying how each package depends on others.
+
+Resolved URLs: Where each package was downloaded from. */

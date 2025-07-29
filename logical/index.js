@@ -1,3 +1,21 @@
+/*  Write a program where?
+Input: ['apple','banana','apple','orange','banana','banana']
+Output: {'apple':2,'banana':3,orange:1}
+
+let data = ['apple','banana','apple','orange','banana','banana','pogo'];
+let countObj = {};
+for(item of data){
+    if(countObj[item]){
+        countObj[item]++
+    }
+    else{
+        countObj[item] = 1
+    }
+}
+console.log(countObj)
+*/
+
+
 /*  What will be in the console?
 
 console.log('Start');
