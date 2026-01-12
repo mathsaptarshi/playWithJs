@@ -1,3 +1,13 @@
+/* 
+Find char all occurance in a string?
+
+
+const asciiCodes = [72, 101, 108, 108, 111]; // ASCII codes for 'Hello'
+const word = String.fromCharCode(...asciiCodes); // Using the spread operator for an array
+console.log(word); 
+
+*/
+
 /*  Write a program where?
 Input: ['apple','banana','apple','orange','banana','banana']
 Output: {'apple':2,'banana':3,orange:1}

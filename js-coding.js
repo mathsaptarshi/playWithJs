@@ -36,7 +36,7 @@ console.log("two");
 /* 
 JavaScript provides six 
 primitive types as undefined, null, boolean, number, string, and symbol , and 
-a reference type object;s
+a reference type object;
 */
 
 // What is the output?
@@ -137,7 +137,7 @@ function sayHi(){
     return "Hi";
 }
 
-// *****************************leakage of global variable
+// *****************************leakage of global variable************
 
 function ab(){
 	height = 50;
