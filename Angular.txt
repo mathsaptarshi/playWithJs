@@ -1,0 +1,71 @@
+1)what is auth guard, and how we implement and handel authGuard?
+2)What is box model? Purpose of using box model?
+3) What is lazy loading
+3.1)Angular life cycle hooks.
+3.2) what is directive, how you implement directive in your angular project
+4)How to share data to multiple component? Parent to child: 4. write the codes of how you use input, output decorator (codes in details from parent to child and child to parent along with html and ts files)
+5 5)Update data on web page without refreshing?
+5. What is dependency Injection and write the codes How you inject them in angular application
+6 6)How to design a table? etc
+6. write the codes of how you connect to a backend api and how you handel the data in TS file and make a table structure in html and display data dynamically
+7. why Event Emitter is used in @Output decorator
+8. If your angular application is getting slow then what are the steps to trobuleshoot the issue.
+9
+.0
+1
+9. difference between reactive form and template driven form?
+10. Ways of injecting services.
+Q
+Pre-clientinterview questions
+L3
+14
+15
+1. what is Standalone component
+2. what is difference in build of normal component and standalone component
+3. how to communicate between parent and child
+4. what is signal
+17
+5. fetures of latest version of angular
+6. what is zone.Js
+18
+19
+8. if some thing got changed out side of angular zone then how you got the update in your angular component?
+
+
+
+
+
+
+The main difference between absolute and relative positioning in CSS lies in how the element is positioned relative to its normal flow and its containing element. Here's a breakdown:
+25
+26
+27
+Relative Positioning
+28
+29
+a.
+30
+ib.
+31 c.
+An element with position: relative is positioned relative to its normal position in the document flow.
+It doesn't remove the element from the document flow, meaning it still takes up space where it would normally appear.
+You can use top, right, bottom, or left to adjust its position relative to where it would have normally been.
+32
+33
+Absolute Positioning
+34 •
+An element with position: absolute is positioned relative to the nearest positioned ancestor (i.e., an ancestor with a position of relative, absolute, fixed, or sticky), or if there is no such ancestor, it's positioned relati
+35
+It is removed from the document flow, so it doesn't affect the layout of other elements around it. Other elements will behave as if the absolutely positioned element doesn't exist.
+36
+You use top, right, bottom, or left to define its exact position in the container.
+37
+38
+39 5.
+Sticky position in CSS
+40
+41 In CSS, position: sticky is a relatively new positioning property that allows an element to stick to a defined position (usually the top or bottom of the viewport) when you scroll past it. It behaves like relative until a certain scroll point is re
+42
+43 How It Works:
+44 a. Before the scroll point: The element behaves like it's position: relative (it moves with the page as you scroll).
+45b. At the scroll point: The element behaves like it's position: fixed and stays "stuck" in place as you continue scrolling.
