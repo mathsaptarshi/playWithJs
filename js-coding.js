@@ -784,3 +784,5 @@ console.log(ans)
 function lonelyIntegerXOR(a){
   return a.reduce((x,y)=>xˆy)
 }
+
+// What is call apply bind show with an example

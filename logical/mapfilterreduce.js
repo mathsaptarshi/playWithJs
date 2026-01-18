@@ -52,7 +52,7 @@ console.log("User names:", userNames); // ["Alice", "Bob", "Charlie"]
 const numbersR = [1, 2, 3, 4, 5];
 
 // Using reduce to sum all numbers
-const sum = numberR.reduce(function(accumulator, currentValue) {
+const sum = numbersR.reduce(function(accumulator, currentValue) {
   console.log(`Accumulator: ${accumulator}, Current Value: ${currentValue}`);
   return accumulator + currentValue; // The operation: add current value to accumulator
 }, 0); // Initial value of accumulator is 0
