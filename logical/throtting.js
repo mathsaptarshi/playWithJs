@@ -1,6 +1,6 @@
 
-let getData = function() {
-  console.log('Fetching data...');
+let getData = function(...arg) {
+  console.log('Fetching data...',arg);
   fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(data => {
