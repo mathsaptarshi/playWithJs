@@ -73,6 +73,7 @@ Accumulator: 10, Current Value: 5 (10 + 5 = 15)
 const text = "hello world";
 const charCounts = text.split('').reduce((counts, char) => {
   counts[char] = (counts[char] || 0) + 1; // Increment count for the character
+  // counts[char] = (counts[char] ?? 0) + 1; // Increment count for the character
   return counts;
 }, {}); // Start with an empty object as the initial accumulator
 

@@ -212,6 +212,21 @@ function sumOfDigits(num) {
 
 sumOfDigits(44);
 
+// ---------------------
+
+// Q>Find max among numbers?
+function max(...varss){
+return Math.max(...varss)
+}
+max(1,88,5,99,534,464,354,5,53)
+// ---------------------
+arr1 = [4,8,10]
+arr2 = [1,2,3,...arr1]
+console.log(arr2)
+// [1, 2, 3, 4, 8, 10]
+// ----------------------
+
+
 
 /* ********* Reverse a string using a JavaScript stack******** */
 /* What is Stack and queue? Write a function to reverse a string using stack */

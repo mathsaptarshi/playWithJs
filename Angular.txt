@@ -22,34 +22,19 @@ Pre-clientinterview questions L3
 4. what is signal
 5. fetures of latest version of angular
 6. what is zone.Js
-18
-19
-8. if some thing got changed out side of angular zone then how you got the update in your angular component?
+7. if some thing got changed out side of angular zone then how you got the update in your angular component?
+____________________________________
+Q
 
-
-
-
-
-
-The main difference between absolute and relative positioning in CSS lies in how the element is positioned relative to its normal flow and its containing element. Here's a breakdown:
-25
-26
-27
-Relative Positioning
-28
-29
-a.
-30
-ib.
-31 c.
-An element with position: relative is positioned relative to its normal position in the document flow.
+1) The main difference between absolute and relative positioning in CSS lies in how the element is positioned relative to its normal flow and its containing element. Here's a breakdown:
+2) Relative Positioning
+3) An element with position: relative is positioned relative to its normal position in the document flow.
 It doesn't remove the element from the document flow, meaning it still takes up space where it would normally appear.
 You can use top, right, bottom, or left to adjust its position relative to where it would have normally been.
-32
-33
-Absolute Positioning
-34 •
-An element with position: absolute is positioned relative to the nearest positioned ancestor (i.e., an ancestor with a position of relative, absolute, fixed, or sticky), or if there is no such ancestor, it's positioned relati
+
+
+Absolute Positioning:
+An element with position: absolute is positioned relative to the nearest positioned ancestor (i.e., an ancestor with a position of relative, absolute, fixed, or sticky), or if there is no such ancestor, it's positioned relative
 35
 It is removed from the document flow, so it doesn't affect the layout of other elements around it. Other elements will behave as if the absolutely positioned element doesn't exist.
 36
@@ -64,3 +49,18 @@ Sticky position in CSS
 43 How It Works:
 44 a. Before the scroll point: The element behaves like it's position: relative (it moves with the page as you scroll).
 45b. At the scroll point: The element behaves like it's position: fixed and stays "stuck" in place as you continue scrolling.
+
+
+
+/* 
+CSS
+https://www.interviewbit.com/css-interview-questions/
+
+
+Web Worker
+https://medium.com/@leonardomariamiliacca/web-workers-for-asynchronous-operations-in-angular-fa369968b90a
+
+
+// What is Change Detection
+https://dzone.com/articles/how-to-use-change-detection-in-angular
+*/
