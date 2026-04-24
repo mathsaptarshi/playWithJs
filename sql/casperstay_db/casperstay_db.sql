@@ -77,4 +77,41 @@ END;
 -- CALL UPDATE_PROFILE('555-0101', '123ABC', 'MARK', 'alex.smith@example.com', @v_out);
 
 -- STORED FUNCTIONS
-DROP FUNCTION IF EXISTS CALCULATE_ROOM_PRICE
+DROP FUNCTION IF EXISTS CALCULATE_ROOM_PRICE;
+DELIMITER //
+
+CREATE FUNCTION CALCULATE_ROOM_PRICE ( 
+    check_in DATE, 
+    check_out DATE, 
+    no_of_rooms INT, 
+    h_id INT, 
+    r_type VARCHAR(20)
+)
+RETURNS FLOAT
+READS SQL DATA -- This fixes Error 1418
+DETERMINISTIC  -- Good practice for functions with the same inputs/outputs
+BEGIN
+    DECLARE total_price FLOAT DEFAULT 0.0;
+    DECLARE room_price_per_day FLOAT DEFAULT 0.0;
+    DECLARE days INT DEFAULT 0;
+
+    SET days = ABS(DATEDIFF(check_in, check_out));
+    
+    IF days = 0 THEN
+      RETURN -1;
+    ELSE
+      -- Fetch the price from the table
+      SELECT ROOM_PRICE INTO room_price_per_day 
+      FROM HOTEL_ROOM_DETAILS 
+      WHERE HOTEL_ID = h_id AND ROOM_TYPE = r_type;
+      
+      SET total_price = room_price_per_day * days * no_of_rooms;
+    END IF;
+
+    RETURN total_price;
+END;
+//
+DELIMITER ;
+
+
+-- SELECT CALCULATE_ROOM_PRICE('2020-08-07','2020-08-09',1,1,'Double Room AC')
