@@ -5,6 +5,7 @@ class Node{
     this.right = null;
   }
 }
+
 class BSTree{
   constructor(){
     this.root = null;
@@ -23,7 +24,6 @@ class BSTree{
       this.insertNode(this.root,newNode)
     }
   }
-
   insertNode(root,newNode){
     if(root.value > newNode.value){
       if(root.left === null){
@@ -43,6 +43,37 @@ class BSTree{
     }
   }
 
+
+
+  search(root,val){
+    if(root === null) {
+      return false;
+    }
+    else if(root.value == val){
+      return true;
+    }
+    else if(root.value > val){
+      return this.search(root.left,val);
+    }
+    else{
+      return this.search(root.right,val)
+    }
+  }
+
+  // Tree Traverse DFS -> 1. preOrder 2. inOrder 3. postOrder
+  preOrder(root){
+    if(root){
+      console.warn(root)
+      this.preOrder(root.left);
+      this.preOrder(root.right);
+    }
+  }
+
+    // Tree Traverse BFS
+  bfsTraversing(root){
+
+  }
+
 }
 
 let bst = new BSTree();
@@ -52,7 +83,9 @@ bst.createTree(10);
 bst.createTree(5);
 bst.createTree(11);
 bst.createTree(30);
-bst.createTree(3);
 bst.createTree(40);
 bst.createTree(23);
 console.log(bst);
+// console.warn(bst.search(bst.root, 88));
+// console.warn(bst.preOrder(bst.root));
+bfsTraversing(bst.root)
