@@ -8,6 +8,21 @@ console.log(word);
 
 */
 
+
+
+function sumDigits(n) {
+  n = Math.abs(n); // Handle negative numbers
+  let sum = 0;
+  while (n > 0) {
+    sum += n % 10;           // Extract the last digit
+    n = Math.floor(n / 10);  // Remove the last digit
+  }
+  return sum;
+}
+
+console.log(sumDigits(1234)); // Output: 10
+
+
 /*  Write a program where?
 Input: ['apple','banana','apple','orange','banana','banana']
 Output: {'apple':2,'banana':3,orange:1}
