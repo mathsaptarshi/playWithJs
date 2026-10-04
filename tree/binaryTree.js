@@ -11,13 +11,13 @@ class BinaryTree{
     this.root = null;
   }
 
-  isTreeEmpty(){
+  ç(){
     return this.root == null;
   }
 
   createTree(val){
     let newNode = new Node(val);
-    if(root.value)
+    // if(root.value)
   }
 
 }
